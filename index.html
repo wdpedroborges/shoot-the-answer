@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Shoot The Answer</title>
+	<meta name="author" content="Pedro Stewart Silva Borges">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="icon" type="image/png" href="img/nave.png"/>
+</head>
+<style type="text/css">
+</style>
+<body>
+<h1>Binary Wars</h1>
+<!-- TOAST -->
+<div id="toast"></div>
+<!-- *** -->
+<!-- MODAL DE INÍCIO -->
+<div id="bg_inicio" class="bg">
+	<div id="inicio" class="modal">
+		<h2>Shoot The Answer: Início</h2>
+		<p>Utilize as setas para esquerda e direita ou as letras A e D para mover a nave. Aperte a barra de espaço para atirar.</p>
+		<p>Ao destruir alienígenas, você ganha pontos. Se destruir qualquer outra coisa, perde ponto.</p>
+		<p>Observe a pergunta ou tema apresentado e atire na resposta correta.</p>
+		<p>O jogo acaba quando o tempo chegar a 00:00</p>
+		<p><label for="tempo_desejado">Defina seu tempo de jogo em minutos:</label></p>
+		<input type="number" id="tempo_desejado" value="5">
+		<p class="aviso">Você mesmo pode definir as perguntas e as respostas. É necessário que cada pergunta esteja na mesma posição da sua resposta correspondente. Para separar cada uma das coisas, utilize ponto e vírgula.</p>
+		<p><label for="perguntas">Perguntas:</label></p>
+		<textarea id="perguntas">Acre; Alagoas; Amapá; Amazonas; Bahia; Ceará; Espírito Santo; Goiás; Maranhão; Mato Grosso; Mato Grosso do Sul; Minas Gerais; Pará; Paraíba; Paraná; Pernambuco; Piauí; Rio de Janeiro; Rio Grande do Norte; Rio Grande do Sul; Rondônia; Roraima; Santa Catarina; São Paulo; Sergipe; Tocantins; Distrito Federal</textarea>
+		<p><label for="respostas">Respostas</label></p>
+		<textarea id="respostas">Rio Branco; Maceió; Macapá; Manaus; Salvador; Fortaleza; Vitória; Goiânia; São Luís; Cuiabá; Campo Grande; Belo Horizonte; Belém; João Pessoa; Curitiba; Recife; Teresina; Rio de Janeiro; Natal; Porto Alegre; Porto Velho; Boa Vista; Florianópolis; São Paulo; Aracaju; Palmas; Brasília</textarea>
+		<button id="btn_jogar">Jogar!</button>
+	</div>
+</div>
+<!-- *** -->
+<!-- MODAL DE GAME OVER -->
+<div id="bg_fim" class="bg">
+	<div id="fim" class="modal">
+		<h2>Binary Wars: Game Over</h2>
+		<p>Seu tempo acabou.</p>
+		<p>Pontuação obtida: <span id="pontuacao_obtida">666</span></p>
+		<button id="btn_jogar_novamente">Jogar novamente!</button>
+	</div>
+</div>
+<!-- *** -->
+<!-- JOGO -->
+<div id="espaco">
+	<div id="alternativas">
+		<div class="alt"><span class="valor">Resposta</span></div>
+		<div class="alt"><span class="valor">Resposta</span></div>
+		<div class="alt"><span class="valor">Resposta</span></div>
+		<div class="alt"><span class="valor">Resposta</span></div>
+		<div class="alt"><span class="valor">Resposta</span></div>
+		<div class="alt"><span class="valor">Resposta</span></div>
+		<div class="alt"><span class="valor">Resposta</span></div>
+		<div class="alt"><span class="valor">Resposta</span></div>
+	</div>
+	<div id="informacoes">
+		<p><span class="negrito">Pergunta: </span><span id="pergunta">Pergunta</span> <span class="material-icons">flag</span></p>
+		<p><span class="negrito">Pontuação: </span> <span class="verde"><span id="pontuacao">0</span> <span class="material-icons">stars</span></span></p>
+		<p><span class="negrito">Tempo: </span> <span class="vermelho"><span id="tempo">05:00</span> <span class="material-icons">query_builder</span></span></p>
+	</div>
+	<div id="obstaculos">
+	</div>
+	
+	<div id="laser"></div>
+	<div id="nave">
+	</div>
+</div>
+<!-- *** -->
+<!-- <script src="../../GamesLib/dist/gameslib.js"></script> -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
